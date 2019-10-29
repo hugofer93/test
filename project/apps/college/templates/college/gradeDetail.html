@@ -1,0 +1,24 @@
+{% extends 'college/base.html' %}
+
+{% block title %}Grade Detail{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+      <br>
+      <h1 class="text-center">Grade Detail</h1>
+      <p class="text-center">Note: to remove, disable 'available'</p>
+      
+      <br>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-success" type="submit">Submit</button>
+      </form>
+
+      <br>
+      <a class="btn btn-block btn-light" href="{% url 'college:gradeList' %}">
+        Back to List
+      </a>
+    </div>
+{% endblock %}

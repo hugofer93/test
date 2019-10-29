@@ -1,0 +1,23 @@
+{% extends 'college/base.html' %}
+
+{% block title %}Add Employee{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+      <br>
+      <h1 class="text-center">Add Employee</h1>
+
+      <br>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-success" type="submit">Submit</button>
+      </form>
+
+      <br>
+      <a class="btn btn-block btn-light" href="{% url 'college:index' %}">
+        Back to Index
+      </a>
+    </div>
+{% endblock content %}

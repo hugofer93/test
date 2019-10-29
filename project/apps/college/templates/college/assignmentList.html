@@ -1,0 +1,31 @@
+{% extends 'college/base.html' %}
+
+{% block title %}Assignment List{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+      <br>
+      <h1 class="text-center">Assignment List</h1>
+
+      <br>
+      <div class="list-group text-center">
+      
+        {% for object in object_list %}
+        <a href="{{ object.get_absolute_url }}" class="list-group-item list-group-item-action list-group-item-light">
+          {{ object }}
+        </a>
+        {% empty %}
+        <a class="list-group-item list-group-item-action list-group-item-warning">
+          Don't Exist Assignments
+        </a>
+        {% endfor %}
+
+      </div>
+
+      <br>
+      <a class="btn btn-block btn-light" href="{% url 'college:index' %}">
+        Back to Index
+      </a>
+    </div>
+{% endblock %}

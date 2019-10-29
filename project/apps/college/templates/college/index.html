@@ -1,0 +1,34 @@
+{% extends 'college/base.html' %}
+
+{% block title %}Index{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+      <br>
+      <h1 class="text-center">College App</h1>
+
+      <br>
+      <div class="list-group text-center">
+        <a class="list-group-item list-group-item-action list-group-item-primary">Employee Menu:</a>
+        <a href="{% url 'college:addEmployee' %}" class="list-group-item list-group-item-action list-group-item-light">Add Employee</a>
+        <a href="{% url 'college:employeeList' %}" class="list-group-item list-group-item-action list-group-item-light">Employees List</a>
+      </div>
+
+      <br>
+      <div class="list-group text-center">
+        <a class="list-group-item list-group-item-action list-group-item-primary">Grade Menu:</a>
+        <a href="{% url 'college:addGrade' %}" class="list-group-item list-group-item-action list-group-item-light">Add Grade</a>
+        <a href="{% url 'college:gradeList' %}" class="list-group-item list-group-item-action list-group-item-light">Grades List</a>
+      </div>
+
+      <br>
+      <div class="list-group text-center">
+        <a class="list-group-item list-group-item-action list-group-item-primary">Assign Menu:</a>
+        <a href="{% url 'college:assignGrade' %}" class="list-group-item list-group-item-action list-group-item-light">Assign Grade</a>
+        <a href="{% url 'college:assignmentList' %}" class="list-group-item list-group-item-action list-group-item-light">Assignment List</a>
+      </div>
+
+    </div>
+{% endblock content %}
+    

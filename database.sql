@@ -1,0 +1,5 @@
+CREATE DATABASE ColegioNN CHARACTER SET utf8 COLLATE utf8_spanish2_ci;
+
+GRANT ALL PRIVILEGES ON ColegioNN.* TO 'test'@'localhost' IDENTIFIED BY 'test';
+
+FLUSH PRIVILEGES;

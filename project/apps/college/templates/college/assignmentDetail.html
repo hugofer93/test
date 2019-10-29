@@ -1,0 +1,27 @@
+{% extends 'college/base.html' %}
+
+{% block title %}Assignment Detail{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+      <br>
+      <h1 class="text-center">Assignment Detail</h1>
+      <p class="text-center">Note: to remove, disable 'available'</p>
+      
+      <br>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-success" type="submit">Submit</button>
+        <a class="btn btn-danger" href="{% url 'college:assignmentDelete' id=object.id %}">
+          Delete
+        </a>
+      </form>
+
+      <br>
+      <a class="btn btn-block btn-light" href="{% url 'college:assignmentList' %}">
+        Back to List
+      </a>
+    </div>
+{% endblock %}
